@@ -29,12 +29,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 // Cấu hình CORS
-app.use(cors({
-  origin: ['http://localhost:3000', 'http://192.168.1.7:8081', 'http://192.168.1.21:8081'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ['http://localhost:3000', 'http://192.168.1.7:8081', 'http://192.168.1.21:8081', 'https://fe-mart-shop-git-main-nkcuongdev1s-projects.vercel.app/'],
+//   credentials: true
+// }));
 // app.use(cors()); 
-
+app.use(cors({ origin: '*', credentials: true }));
 
 
 
